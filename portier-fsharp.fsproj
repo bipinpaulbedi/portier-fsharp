@@ -4,21 +4,21 @@
     <AzureFunctionsVersion>v3</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.3" />
-    <PackageReference Include="Giraffe" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.*" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.*" />
+    <PackageReference Include="Giraffe" Version="4.1.*" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Run.fs" />
     <Compile Include="Startup.fs" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="host.json">
+    <Content Include="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="local.settings.json">
+    </Content>
+    <Content Include="local.settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 </Project>

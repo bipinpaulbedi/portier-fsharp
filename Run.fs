@@ -8,6 +8,7 @@ module Run
     open System.Threading.Tasks
     open FSharp.Control.Tasks.V2
 
+    [<CLIMutable>]
     type Auth = { Name : string }
 
     let auth = { Name = "Yes" }
